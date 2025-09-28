@@ -198,6 +198,7 @@
         /* Hero Section */
         .hero {
             height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
             position: relative;
             display: flex;
             align-items: center;
@@ -205,6 +206,7 @@
             text-align: center;
             overflow: hidden;
         }
+
 
         .hero-video {
             position: absolute;
@@ -257,7 +259,7 @@
             position: relative;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 20px 40px rgba(51, 51, 51);
         }
 
         .about-image img {
@@ -288,6 +290,11 @@
         }
 
         /* Services Section */
+        .services {
+            padding: 100px 0;
+            background-color: black;
+        }
+
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -295,29 +302,120 @@
         }
 
         .service-card {
-            background-color: var(--dark-secondary);
+            background: #f9f9f9;
             border-radius: 10px;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: center;
             padding: 30px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 15px 30px rgba(26, 5, 5);
         }
 
-        .service-icon {
+        .service-card i {
             font-size: 3rem;
-            color: var(--gold);
+            color: #e6b400;
             margin-bottom: 20px;
         }
 
         .service-card h3 {
             font-size: 1.5rem;
             margin-bottom: 15px;
+            color: #333;
         }
+
+        .service-card p {
+            color: #666;
+        }
+
+
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background-color: rgba(10, 10, 10, 0.7);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: white;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: whitesmoke;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+/* Achievements */
+        .achievements {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .achievement-item {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .achievement-item i {
+            font-size: 2.5rem;
+            color: #e6b400;
+            margin-bottom: 15px;
+        }
+
+        .achievement-item h3 {
+            font-size: 2.5rem;
+            color: whitesmoke;
+            margin-bottom: 10px;
+        }
+
+        .achievement-item p {
+            color: white;
+        }
+
 
         /* Portfolio Section */
         .portfolio-filters {
@@ -327,22 +425,26 @@
             flex-wrap: wrap;
         }
 
-        .filter-btn {
-            background: none;
-            border: none;
-            color: var(--text-gray);
-            padding: 8px 20px;
-            margin: 0 10px;
-            cursor: pointer;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            border-radius: 30px;
-        }
+.filter-btn {
+    background: #000;              /* solid black background */
+    border: none;
+    color: #000;                   /* white text */
+    padding: 8px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-radius: 30px;
+}
+        ..filter-btn:hover {
+    background: #333;              /* dark gray on hover */
+}
 
-        .filter-btn.active, .filter-btn:hover {
-            color: var(--gold);
-            background-color: rgba(212, 175, 55, 0.1);
-        }
+.filter-btn.active {
+    background: #fff;              /* active button white */
+    color: #000;                   /* black text when active */
+    font-weight: 600;
+}
 
         .portfolio-grid {
             display: grid;
@@ -811,6 +913,126 @@
             transform: translateY(0);
         }
     </style>
+    <style>
+        /* Basic styling for the portfolio section */
+        .portfolio {
+            padding: 60px 0;
+            background-color: #080a0d;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #ded9d9;
+        }
+        
+        .section-title p {
+            color: #ded9d9;
+            font-size: 1.1rem;
+        }
+        
+        .portfolio-filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+        
+        .filter-btn {
+            padding: 8px 20px;
+            background-color: var(--gold);
+            border: 1px solid #472c2c;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn.active, .filter-btn:hover {
+            background-color: #f7f2f2;
+            color: #0a0707;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            aspect-ratio: 4/3;
+        }
+        
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .portfolio-overlay {
+            display: none; /* Hide the overlay with text */
+        }
+        
+        /* Lightbox styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -818,10 +1040,9 @@
         <div class="container">
             <div class="header-content">
                 <a href="/" class="logo">
-  <img src="https://scontent-del1-1.xx.fbcdn.net/v/t39.30808-6/474030819_3170327049781731_6326263497932960275_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=xDwtLYvov_YQ7kNvwGLFccL&_nc_oc=AdmKyhHdZqEEB_djORjLJ1IiVMNuZ0zCqwUtwQxi1e2-zmF62LRSm6I4jPcnc51NFUQ&_nc_zt=23&_nc_ht=scontent-del1-1.xx&_nc_gid=GEdUNN4aILnzQBcouMESdA&oh=00_Afa-oDl6OKkj3HYyQxqEpia6UGelnC1GnWnILJ7qpAKxOw&oe=68DB617F" 
-       alt="Star India Production Logo" 
-       style="height:50px; vertical-align:middle;">
-  <span>Star<span>IndiaProduction</span></span>
+  <img src="https://i.ibb.co/t0FWrn4/sip-white.png" 
+     alt="SIP White Logo" 
+     style="height:60px; vertical-align:middle;">
 </a>
                 <button class="mobile-menu-btn">
                     <i class="fas fa-bars"></i>
@@ -842,6 +1063,8 @@
         </div>
     </header>
 
+
+
     <!-- Hero Section -->
     <section id="home" class="hero">
         <video class="hero-video" autoplay muted loop>
@@ -850,89 +1073,107 @@
         </video>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>Cinematic Wedding Memories</h1>
+            <h3>A Complete</h3>
+            <h1>Video Production house</h1>
             <p>Capturing your most precious moments with artistry and emotion. Professional photography and videography for weddings, events, and special occasions.</p>
             <a href="#book-now" class="btn">Book Your Shoot Now</a>
         </div>
     </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
+<!-- About Section -->
+    <section class="about" id="about">
         <div class="container">
             <div class="section-title">
                 <h2>About Us</h2>
-                <p>Discover the story behind Cenmo Photography</p>
+                <p>Learn more about our journey and commitment to excellence</p>
             </div>
             <div class="about-content">
-                <div class="about-image fade-in">
-                    <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cenmo Photography Team">
+                <div class="about-text">
+                    <h3>Our Story</h3>
+                    <p>Founded in 2019, Star India Creation has quickly become a trusted name in professional photography and videography. Our team of passionate creatives combines technical expertise with artistic vision to deliver visually stunning content that leaves a lasting impression.</p>
+                    <p>We believe that every story deserves to be told beautifully. Our mission is to craft unforgettable visual experiences that celebrate life's milestones, brands, and special events.</p>
+                    
+                    <div class="achievements">
+                        <div class="achievement-item">
+                            <i class="fas fa-smile"></i>
+                            <h3>98%</h3>
+                            <p>Client Satisfaction</p>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-project-diagram"></i>
+                            <h3>50+</h3>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="achievement-item">
+                            <i class="fas fa-film"></i>
+                            <h3>200+</h3>
+                            <p>Hours of Filming & Editing</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="about-text fade-in">
-                    <h3>Our Journey</h3>
-                    <p>Founded in 2013, Cenmo Photography has been dedicated to capturing life's most beautiful moments with artistic vision and technical excellence. What started as a passion project has evolved into a premier photography and videography service specializing in weddings, events, and creative productions.</p>
-                    <p>Our team of experienced professionals combines technical expertise with a keen eye for detail, ensuring that every photograph and video tells a compelling story. We believe in creating not just images, but memories that will last a lifetime.</p>
-                    <p>With over a decade of experience, we've had the privilege of documenting hundreds of weddings and events, each unique and special in its own way. Our mission is to capture the emotion, beauty, and authenticity of your special day.</p>
-                    <span class="experience-badge">10+ Years of Creative Excellence</span>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Our Team">
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
             <div class="section-title">
                 <h2>Our Services</h2>
-                <p>Comprehensive photography and videography solutions</p>
+                <p>
+WEDDING , Prewedding , Music videos, short film , Documentary , Event , Corporate shoot , Advertisement shot</p>
             </div>
             <div class="services-grid">
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-ring"></i>
-                    </div>
-                    <h3>Wedding Photography</h3>
-                    <p>Capturing the magic of your special day with artistic and candid shots that tell your unique love story.</p>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-video"></i>
-                    </div>
-                    <h3>Cinematic Videography</h3>
-                    <p>Creating breathtaking wedding films that preserve the emotions and moments of your celebration.</p>
-                </div>
-                <div class="service-card fade-in">
+                <div class="service-card featured">
                     <div class="service-icon">
                         <i class="fas fa-heart"></i>
                     </div>
-                    <h3>Pre-Wedding Shoots</h3>
+                    <h3>Wedding</h3>
+                    <p>Capturing the magic of your special day with artistic and candid shots that tell your unique love story.</p>
+                </div>
+                <div class="service-card featured">
+                    <div class="service-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Pre-Wedding</h3>
                     <p>Romantic and creative photoshoots that capture the essence of your relationship before the big day.</p>
                 </div>
-                <div class="service-card fade-in">
+                <div class="service-card featured">
                     <div class="service-icon">
-                        <i class="fas fa-birthday-cake"></i>
+                        <i class="fas fa-music"></i>
                     </div>
-                    <h3>Birthday & Party Shoots</h3>
-                    <p>Documenting your celebrations with energy and creativity, from intimate gatherings to grand parties.</p>
+                    <h3>Music Video</h3>
+                    <p>Stylized, cinematic music videos with a blend of storytelling and artistic visuals that match your vision.</p>
                 </div>
-                <div class="service-card fade-in">
+                <div class="service-card featured">
                     <div class="service-icon">
-                        <i class="fas fa-briefcase"></i>
+                        <i class="fas fa-film"></i>
                     </div>
-                    <h3>Corporate Events</h3>
-                    <p>Professional coverage of corporate events, conferences, and business functions with a polished approach.</p>
+                    <h3>Short Films</h3>
+                    <p>Creative short films that convey powerful stories and emotions in a cinematic style.</p>
                 </div>
-                <div class="service-card fade-in">
+                <div class="service-card featured">
                     <div class="service-icon">
-                        <i class="fas fa-drone"></i>
+                        <i class="fas fa-bullhorn"></i>
                     </div>
-                    <h3>Drone Shoots</h3>
-                    <p>Aerial perspectives that add a dramatic and unique dimension to your photography and videography.</p>
+                    <h3>Advertisement</h3>
+                    <p>Engaging advertisements that highlight your brand, product, or service with a professional touch.</p>
+                </div>
+                <div class="service-card featured">
+                    <div class="service-icon">
+                        <i class="fas fa-clapperboard"></i>
+                    </div>
+                    <h3>Post-Production</h3>
+                    <p>Seamless editing, color grading, and sound design to turn raw footage into a polished final masterpiece.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
+     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio">
         <div class="container">
             <div class="section-title">
@@ -943,55 +1184,120 @@
                 <button class="filter-btn active" data-filter="all">All</button>
                 <button class="filter-btn" data-filter="wedding">Wedding</button>
                 <button class="filter-btn" data-filter="pre-wedding">Pre-Wedding</button>
-                <button class="filter-btn" data-filter="events">Events</button>
-                <button class="filter-btn" data-filter="drone">Drone</button>
+                <button class="filter-btn" data-filter="events">Music Video</button>
+                <button class="filter-btn" data-filter="short-films">Short Films</button>
+                <button class="filter-btn" data-filter="advertisement">Advertisement</button>
+                <button class="filter-btn" data-filter="post-production">Post-Production</button>
             </div>
             <div class="portfolio-grid">
                 <div class="portfolio-item fade-in" data-category="wedding">
-                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Wedding Photography">
-                    <div class="portfolio-overlay">
-                        <h3>Sarah & Michael's Wedding</h3>
-                        <p>Elegant garden wedding captured with natural light and emotional storytelling.</p>
-                    </div>
-                </div>
-                <div class="portfolio-item fade-in" data-category="pre-wedding">
-                    <img src="https://images.unsplash.com/photo-1532712988586-5b1f0a6b30d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pre-Wedding Shoot">
-                    <div class="portfolio-overlay">
-                        <h3>Beachside Pre-Wedding</h3>
-                        <p>Romantic sunset shoot capturing the couple's connection against a breathtaking backdrop.</p>
-                    </div>
-                </div>
-                <div class="portfolio-item fade-in" data-category="events">
-                    <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Corporate Event">
-                    <div class="portfolio-overlay">
-                        <h3>Annual Corporate Gala</h3>
-                        <p>Professional coverage of a high-profile corporate event with attention to key moments.</p>
-                    </div>
+                    <img src="https://scontent.fdel64-1.fna.fbcdn.net/v/t51.82787-15/525078840_18528092494058024_9158875085872546344_n.webp?stp=dst-jpg_tt6&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=pGl-89EsxG0Q7kNvwFuJLbh&_nc_oc=AdkwW6z6syJJSM8ELo9TxHa3u0uWCcziQNN_JqMmBJWtkR7w_ia_yd4qLgH9Uz3vDnE&_nc_zt=23&_nc_ht=scontent.fdel64-1.fna&_nc_gid=qlqmRBN5Ttzus3rI-70axg&oh=00_AfYOWCpd_Q6SAvzH3bN26OElgr0R0gs1o9FAYfqEwJBgMg&oe=68DEB17A" alt="Wedding Photography">
                 </div>
                 <div class="portfolio-item fade-in" data-category="wedding">
-                    <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Wedding Ceremony">
-                    <div class="portfolio-overlay">
-                        <h3>Traditional Church Wedding</h3>
-                        <p>Classic ceremony captured with respect for tradition and attention to emotional details.</p>
-                    </div>
+                    <img src="https://scontent.fdel64-1.fna.fbcdn.net/v/t51.82787-15/525098160_18528092596058024_2155017457065782968_n.webp?stp=dst-jpg_tt6&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=c4WTY8NpcVEQ7kNvwFSzIdF&_nc_oc=AdkA3UWFImKa2OlNeYtrStwPeCQh6fCbA7VXRcymh2IgPnhHA8cI3YwCXMFwWUvRbnI&_nc_zt=23&_nc_ht=scontent.fdel64-1.fna&_nc_gid=h1f3J4s3SGpRsBnO9aufRA&oh=00_AfaZjbl5jHhqLZ6XDUaHr-Y1KgmtonL7oOGR-N_fsewdGg&oe=68DEB014" alt="Wedding Photography">
                 </div>
-                <div class="portfolio-item fade-in" data-category="drone">
+                <div class="portfolio-item fade-in" data-category="wedding">
+                    <img src="https://scontent.fdel64-1.fna.fbcdn.net/v/t51.75761-15/476488777_18493420174058024_6996303649250300898_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=hX3rPkM7r74Q7kNvwHSq0xC&_nc_oc=AdkDJ6bx5GFEpPBYPZ6qNe4CiGADCXDZ9bEWBwti24M6_wehHte4BayS4z4B15Emkhk&_nc_zt=23&_nc_ht=scontent.fdel64-1.fna&_nc_gid=LqMqDW-tNuCTJFyZJBGguQ&oh=00_AfYJoQWMBymGTDgelv5xYlOJ7rK5BXIz3NiyQBDezH-xyA&oe=68DE87E6" alt="Wedding Photography">
+                </div>
+                <div class="portfolio-item fade-in" data-category="wedding">
+                    <img src="https://scontent.fdel64-1.fna.fbcdn.net/v/t51.75761-15/475991151_18492745228058024_2229532541489812230_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=oVHQOfCTrOoQ7kNvwHD5Buv&_nc_oc=AdljU2pdiw6ewVZqbqFCmqeQigs19oQgmtx_mmFPde0oU9KOZP0Yob1UFS6tdQmOIEs&_nc_zt=23&_nc_ht=scontent.fdel64-1.fna&_nc_gid=iiqf19s8HrKuRBIMn2kU7w&oh=00_AfawWLWCyCilT7I1uzlvMIYIY8GCrgZwSE-__yHF8fl5XA&oe=68DE96F7" alt="Wedding Photography">
+                </div>
+                <div class="portfolio-item fade-in" data-category="wedding">
+                    <img src="https://scontent.fdel64-1.fna.fbcdn.net/v/t51.75761-15/475863498_18492444292058024_6573171326226987714_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=_EVKYBgZuhgQ7kNvwGxl5cB&_nc_oc=AdmtKx9G4kgJhy0DuYwuaC0wJC15ioJhr2ZYXLaj-k-8YORK4DDC8AjcZG9AuvzlmMM&_nc_zt=23&_nc_ht=scontent.fdel64-1.fna&_nc_gid=JHwuUjGfHlfDX1IHa-Xsbg&oh=00_Afaiy4r5uia4ogbBEFefu3aP3vGKnf_Y88zq1hm12vXMFg&oe=68DE811C" alt="Wedding Photography">
+                </div>
+                <div class="portfolio-item fade-in" data-category="wedding">
+                    <img src="https://scontent.fdel64-1.fna.fbcdn.net/v/t39.30808-6/487860129_1080668157413524_2976555592004838157_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=rhj0ABeMhT8Q7kNvwGy9F7x&_nc_oc=Adl1-ARi0TzrhO92IUXtiAouDoxTntAXC26g1G983Xx8T-sTskF8V2nG7CC1yXy02vU&_nc_zt=23&_nc_ht=scontent.fdel64-1.fna&_nc_gid=xmoR6cLP5IY164mfocSCFQ&oh=00_AfblaDFZXudtrp19Bpl3RmiUsE5SzuWBpOmCg8k2RNIvdg&oe=68DE9D11" alt="Wedding Photography">
+                </div>
+                <div class="portfolio-item fade-in" data-category="wedding">
+                    <img src="https://scontent.fdel64-1.fna.fbcdn.net/v/t51.75761-15/470917225_18484691206058024_234297025674058915_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=KPxoNaftQFMQ7kNvwHHLSNd&_nc_oc=AdnFa42cBnZZFGD1kgnTbo2Ygz7CpwpPMmZuCZNkDUauzSGmOg6OEQ81ljJ9JD4lGa0&_nc_zt=23&_nc_ht=scontent.fdel64-1.fna&_nc_gid=Wd-sYjfhXampUuWpgGLg-w&oh=00_AfZlM7OE0v-kZbXTQyssKtlTLPBbr_3KJhh8UlfkC8dY0g&oe=68DEA091" alt="Wedding Photography">
+                </div>
+                <div class="portfolio-item fade-in" data-category="pre-wedding">
+                    <img src="https://scontent.fdel64-1.fna.fbcdn.net/v/t51.82787-15/542759436_18535564375058024_3613637571051860854_n.webp?stp=dst-jpg_tt6&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=F-BU28WOG64Q7kNvwEEf5rG&_nc_oc=AdmYp4f0R9OD8P83QfJduKtZRfX_NeOvMdMRHNLRhpPRb1aZFd0UeN4BT9P9pP_sChI&_nc_zt=23&_nc_ht=scontent.fdel64-1.fna&_nc_gid=HzAcouBK5pj_w5oka3hWEw&oh=00_AfZZ8K_QbRzcjS3rwVZwHkajnP7Mu4iFXzrOcE-KEOif0g&oe=68DEAD0A" alt="pre-wedding">
+                </div>
+                <div class="portfolio-item fade-in" data-category="pre-wedding">
+                    <img src="https://scontent.fdel64-1.fna.fbcdn.net/v/t51.75761-15/504450721_18518907334058024_5261152561121682388_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=xB5wmeWuMuQQ7kNvwHtEH4_&_nc_oc=AdlfXMYoRQz_c8OXb_aVu81j0lyufBB-CeOFgLtg1kqID5n7KqEXusq_m5MQe5GuTyQ&_nc_zt=23&_nc_ht=scontent.fdel64-1.fna&_nc_gid=LHzextxAWBIFRbhWEX93bA&oh=00_AfZ3bMAp3-qzW62moTpoQ-KKLdp1Prv77zsh8Clfg9i0xg&oe=68DEB4F3" alt="pre-wedding">
+                </div>
+                <div class="portfolio-item fade-in" data-category="pre-wedding">
+                    <img src="https://scontent.fdel64-1.fna.fbcdn.net/v/t51.75761-15/504113046_18518874259058024_6217179724066955049_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=v5YIy_wZxckQ7kNvwFayLgx&_nc_oc=Adk99oxIIln_gU8O4lX55JYihL-XeKdNGnE-3iGwN1UUccIeMb9CI0KOVCGEzRJQNuU&_nc_zt=23&_nc_ht=scontent.fdel64-1.fna&_nc_gid=1im1hDS2Y5kG7toi8Pt8xg&oh=00_AfZHogJ7vVmRKjz97W75QKNXF0SwSpNB9i0-Wuwk4TlW4g&oe=68DE945D" alt="pre-wedding">
+                </div>
+                <div class="portfolio-item fade-in" data-category="pre-wedding">
+                    <img src="https://scontent.fdel64-1.fna.fbcdn.net/v/t51.75761-15/499552534_18514838035058024_9033898177378507797_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=dVGl8dT1LAQQ7kNvwELFGnc&_nc_oc=AdmDbkOA_kkOngqWOS_sJFY1-SuOm7HXHTw24XXQsTX551dQ9lHS0sHuBH90Mp3yGOw&_nc_zt=23&_nc_ht=scontent.fdel64-1.fna&_nc_gid=Y5gdgSkh5TGdMZG2iHjt4g&oh=00_AfaNoLq1RmkKTfAJcIe-TcGB5zBSiSlesf_jCEPkhav5-Q&oe=68DE98B7" alt="pre-wedding">
+                </div>
+                <div class="portfolio-item fade-in" data-category="pre-wedding">
+                    <img src="https://scontent.fdel64-1.fna.fbcdn.net/v/t51.75761-15/499426546_18514379761058024_5956860111627729772_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=F4N4IldByZkQ7kNvwHbVL3U&_nc_oc=AdmphwGM6kJdAm2ZDNTBLomz6PHtBm2Z3rkOwaDPwdYS3_105kkmp_k3bRv9yvEYEVw&_nc_zt=23&_nc_ht=scontent.fdel64-1.fna&_nc_gid=v9G6ncWqfY2s1rH5n0W1Gw&oh=00_AfYKni9PxFbIwfmcUOXhLmVK35KlZTyeER0c0uUlqOY6JQ&oe=68DEA4A4" alt="pre-wedding">
+                </div>
+                <div class="portfolio-item fade-in" data-category="pre-wedding">
+                    <img src="https://scontent.fdel64-1.fna.fbcdn.net/v/t51.75761-15/498941979_18514178905058024_6567424254579766559_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=RNYLEFVSYyUQ7kNvwFNbH-R&_nc_oc=AdnQVqcyTjI7ZRsoOPBSdwHwnQEzNiaL8OxGk4Ojw9hzTFdtC-qmP_BKPKxGZg5mNsU&_nc_zt=23&_nc_ht=scontent.fdel64-1.fna&_nc_gid=YCYA9lUFtnvmxB5H5xEi1Q&oh=00_AfaE_s1PAoVrXwXoZWxDJltiGVyoUPC0NWDSeTyJE71ioQ&oe=68DE970A" alt="pre-wedding">
+                </div>
+                <div class="https://scontent.fdel64-1.fna.fbcdn.net/v/t51.75761-15/499424223_18514198339058024_1489694782216313314_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=6X52KDVEk4QQ7kNvwEVYYba&_nc_oc=AdnXMsjiid_crez82VhedHY99frV-SFBIhum_6sHI7r7TzfnZnRvwr9n7f7m0irJDEk&_nc_zt=23&_nc_ht=scontent.fdel64-1.fna&_nc_gid=iFEwPw4Pj1bNaYsB-8o9bw&oh=00_AfZhXdCmkjU5scC0u-N6zyEQLT6jUrGVY_uD16_ZukQtxw&oe=68DE88B1" alt="pre-wedding">
+                </div>
+                <div class="portfolio-item fade-in" data-category="pre-wedding">
+                    <img src="https://scontent.fdel64-1.fna.fbcdn.net/v/t51.75761-15/499759530_18514103851058024_8832982263101029530_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=WBx8431fqnwQ7kNvwENH-A4&_nc_oc=Adk_fJq2TORSZ0d5Nt-e_J14NieBh3CVyUyI-D_YlsTzr4PT40bedKeYZ6gE7q5rjQ8&_nc_zt=23&_nc_ht=scontent.fdel64-1.fna&_nc_gid=FFKc1PRZ3-UAUiIKkEcnsQ&oh=00_AfZktKzXh9dX9a95rKXaY82bJKoRg5ipX36JGldeNPtDsw&oe=68DEB83C " alt="pre-wedding">
+                </div>
+                <div class="https://scontent.fdel64-1.fna.fbcdn.net/v/t51.75761-15/497621529_18512740015058024_7033163853414916725_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=GAT2fBJRCoMQ7kNvwETuNT7&_nc_oc=Adl2B2WqTS_EvNxjRQyGc9x3S98-vyGXfNLcatVfM7_ghQiCEMGlv7SqiS7SEYAti_k&_nc_zt=23&_nc_ht=scontent.fdel64-1.fna&_nc_gid=p-pY4wuJ72fxYzPZNg-KmQ&oh=00_AfbasPMKuhcFV5wDPAf6c9oz_ysQoHFja__eziLwwT39hg&oe=68DEB79B" alt="pre-wedding">
+                </div>
+                <div class="portfolio-item fade-in" data-category="short-films">
                     <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Drone Photography">
-                    <div class="portfolio-overlay">
-                        <h3>Aerial Venue Showcase</h3>
-                        <p>Breathtaking drone footage highlighting the scale and beauty of the wedding venue.</p>
-                    </div>
                 </div>
                 <div class="portfolio-item fade-in" data-category="events">
                     <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Birthday Party">
-                    <div class="portfolio-overlay">
-                        <h3>Milestone Birthday Celebration</h3>
-                        <p>Vibrant party photography capturing the joy and energy of a special birthday event.</p>
-                    </div>
                 </div>
+            </div>
+            <!-- Lightbox Popup -->
+            <div id="lightbox" class="lightbox">
+                <span class="close-btn">&times;</span>
+                <img id="lightbox-img" src="">
             </div>
         </div>
     </section>
+
+    <script>
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // Update active button
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                this.classList.add('active');
+                
+                // Filter items
+                const filter = this.getAttribute('data-filter');
+                document.querySelectorAll('.portfolio-item').forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Lightbox functionality
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+        const closeBtn = document.querySelector(".close-btn");
+
+        // Open lightbox when image clicked
+        document.querySelectorAll(".portfolio-item img").forEach(img => {
+            img.addEventListener("click", function() {
+                lightbox.style.display = "flex";
+                lightboxImg.src = this.src;
+            });
+        });
+
+        // Close lightbox on button click
+        closeBtn.addEventListener("click", () => {
+            lightbox.style.display = "none";
+        });
+
+        // Also close when clicking outside image
+        lightbox.addEventListener("click", (e) => {
+            if (e.target === lightbox) {
+                lightbox.style.display = "none";
+            }
+        });
+    </script>
 
     <!-- Pricing Section -->
     <section id="pricing" class="pricing">
@@ -1001,9 +1307,9 @@
                 <p>Choose the perfect package for your needs</p>
             </div>
             <div class="pricing-plans">
-                <div class="pricing-card fade-in">
-                    <h3>Bronze</h3>
-                    <div class="price">$1,200<span>/event</span></div>
+                <div class="pricing-card fade-in featured">
+                    <h3>Wedding</h3>
+                    <div class="price">₹80,000</div>
                     <ul class="pricing-features">
                         <li>6 Hours of Coverage</li>
                         <li>300+ Edited Photos</li>
@@ -1014,8 +1320,8 @@
                     <a href="#book-now" class="btn btn-outline">Select Plan</a>
                 </div>
                 <div class="pricing-card fade-in featured">
-                    <h3>Silver</h3>
-                    <div class="price">$2,500<span>/event</span></div>
+                    <h3>Pre-Wedding</h3>
+                    <div class="price">₹15,000</div>
                     <ul class="pricing-features">
                         <li>10 Hours of Coverage</li>
                         <li>500+ Edited Photos</li>
@@ -1026,9 +1332,9 @@
                     </ul>
                     <a href="#book-now" class="btn">Select Plan</a>
                 </div>
-                <div class="pricing-card fade-in">
-                    <h3>Gold</h3>
-                    <div class="price">$3,800<span>/event</span></div>
+                <div class="pricing-card fade-in featured">
+                    <h3>Music Video</h3>
+                    <div class="price">₹80,000</div>
                     <ul class="pricing-features">
                         <li>Full Day Coverage</li>
                         <li>800+ Edited Photos</li>
@@ -1040,12 +1346,12 @@
                     </ul>
                     <a href="#book-now" class="btn btn-outline">Select Plan</a>
                 </div>
-                <div class="pricing-card fade-in">
-                    <h3>Platinum</h3>
-                    <div class="price">$5,500<span>/event</span></div>
+                <div class="pricing-card fade-in featured">
+                    <h3>Event</h3>
+                    <div class="price">₹20,000</div>
                     <ul class="pricing-features">
                         <li>Full Day Coverage</li>
-                        <li>1000+ Edited Photos</li>
+                        <li>10000+ Edited Photos</li>
                         <li>Online Gallery + Premium USB</li>
                         <li>3 Photographers + 2 Videographers</li>
                         <li>Cinematic Editing</li>
@@ -1059,7 +1365,7 @@
             </div>
             <div class="add-ons fade-in" style="margin-top: 50px; text-align: center;">
                 <h3>Additional Services</h3>
-                <p>Drone Shoots: $300 | Extra Hour: $200 | Additional Album: $400 | Engagement Session: $350</p>
+                <p>Drone Shoots: ₹5,000 | Extra Day: ₹10,000</p>
             </div>
         </div>
     </section>
@@ -1116,7 +1422,8 @@
                         </div>
                         <div class="contact-details">
                             <h3>Our Studio</h3>
-                            <p>123 Photography Lane, Creative District<br>Cityville, ST 12345</p>
+                            <p>(Office) Shanti nagar pani tanki <br>Bikramganj, Rohtas, Bihar 802212</p>
+                            <p>(Branch) Saberi <br>Grater Noida, Delhi(NCR) 201009</p>
                         </div>
                     </div>
                     <div class="contact-item fade-in">
@@ -1125,7 +1432,7 @@
                         </div>
                         <div class="contact-details">
                             <h3>Phone Number</h3>
-                            <p>+91 8178226848</p>
+                            <p>+91 7903376540,  +91 6202104784</p>
                         </div>
                     </div>
                     <div class="contact-item fade-in">
@@ -1134,7 +1441,7 @@
                         </div>
                         <div class="contact-details">
                             <h3>Email Address</h3>
-                            <p>starindiaproduction@gmail.com</p>
+                            <p>starindiacreation@gmail.com</p>
                         </div>
                     </div>
                     <div class="contact-item fade-in">
@@ -1143,7 +1450,7 @@
                         </div>
                         <div class="contact-details">
                             <h3>WhatsApp</h3>
-                            <p>+91 8178226848</p>
+                            <p>+91 7903376540</p>
                         </div>
                     </div>
                     <div class="social-links fade-in">
@@ -1242,7 +1549,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
-                    <h3>Cenmo Photography</h3>
+                    <h3>Star India Production</h3>
                     <p>Creating timeless memories through exceptional photography and videography services for weddings, events, and special occasions.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -1264,11 +1571,12 @@
                 <div class="footer-col">
                     <h3>Services</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Wedding Photography</a></li>
-                        <li><a href="#">Cinematic Videography</a></li>
-                        <li><a href="#">Pre-Wedding Shoots</a></li>
-                        <li><a href="#">Event Coverage</a></li>
-                        <li><a href="#">Drone Shoots</a></li>
+                        <li><a href="#">Wedding</a></li>
+                        <li><a href="#">Pre-Wedding</a></li>
+                        <li><a href="#">Music Video</a></li>
+                        <li><a href="#">Short Films</a></li>
+                        <li><a href="#">Advertisement</a></li>
+                        <li><a href="#">Event</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -1281,142 +1589,165 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2023 Star india production. All Rights Reserved.</p>
+                <p>&copy; 2019 Star India Production. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <a href="#" class="back-to-top" id="backToTop">
-        <i class="fas fa-chevron-up"></i>
-    </a>
+   <!-- Back to Top Button -->
+<a href="#" class="back-to-top" id="backToTop">
+    <i class="fas fa-chevron-up"></i>
+</a>
 
-    <script>
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const nav = document.getElementById('nav');
-        
+<script>
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.getElementById('nav');
+    
+    if (mobileMenuBtn && nav) {
         mobileMenuBtn.addEventListener('click', () => {
             nav.classList.toggle('active');
         });
+    }
 
-        // Header Scroll Effect
-        const header = document.getElementById('header');
-        
-        window.addEventListener('scroll', () => {
+    // Header Scroll Effect
+    const header = document.getElementById('header');
+    const backToTop = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', () => {
+        if (header) {
             if (window.scrollY > 100) {
                 header.classList.add('scrolled');
             } else {
                 header.classList.remove('scrolled');
             }
-            
-            // Back to top button visibility
-            const backToTop = document.getElementById('backToTop');
+        }
+
+        // Back to top button visibility
+        if (backToTop) {
             if (window.scrollY > 500) {
                 backToTop.classList.add('visible');
             } else {
                 backToTop.classList.remove('visible');
             }
-        });
+        }
+    });
 
-        // Portfolio Filtering
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        const portfolioItems = document.querySelectorAll('.portfolio-item');
-        
+    // Back to Top scroll behavior
+    if (backToTop) {
+        backToTop.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    // Portfolio Filtering
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    
+    if (filterButtons.length > 0 && portfolioItems.length > 0) {
         filterButtons.forEach(button => {
             button.addEventListener('click', () => {
-                // Remove active class from all buttons
                 filterButtons.forEach(btn => btn.classList.remove('active'));
-                // Add active class to clicked button
                 button.classList.add('active');
                 
                 const filterValue = button.getAttribute('data-filter');
                 
                 portfolioItems.forEach(item => {
                     if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                        item.style.display = 'block';
+                        item.style.display = 'block'; // adjust to flex/grid if needed
                     } else {
                         item.style.display = 'none';
                     }
                 });
             });
         });
+    }
 
-        // Testimonials Slider
-        const testimonialContainer = document.querySelector('.testimonials-container');
-        const testimonialCards = document.querySelectorAll('.testimonial-card');
-        const sliderDots = document.querySelectorAll('.slider-dot');
-        let currentSlide = 0;
+    // Testimonials Slider
+    const testimonialContainer = document.querySelector('.testimonials-container');
+    const testimonialCards = document.querySelectorAll('.testimonial-card');
+    const sliderDots = document.querySelectorAll('.slider-dot');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        if (!testimonialContainer || testimonialCards.length === 0) return;
         
-        function showSlide(index) {
-            testimonialContainer.style.transform = `translateX(-${index * 100}%)`;
-            
-            // Update active dot
+        testimonialContainer.style.transform = `translateX(-${index * 100}%)`;
+        
+        if (sliderDots.length > 0) {
             sliderDots.forEach(dot => dot.classList.remove('active'));
-            sliderDots[index].classList.add('active');
-            
-            currentSlide = index;
+            if (sliderDots[index]) sliderDots[index].classList.add('active');
         }
-        
-        // Initialize dots click events
+
+        currentSlide = index;
+    }
+
+    if (sliderDots.length > 0) {
         sliderDots.forEach((dot, index) => {
             dot.addEventListener('click', () => {
                 showSlide(index);
             });
         });
-        
-        // Auto slide change
+    }
+
+    if (testimonialCards.length > 0) {
         setInterval(() => {
             let nextSlide = (currentSlide + 1) % testimonialCards.length;
             showSlide(nextSlide);
         }, 5000);
+    }
 
-        // Form Submission
-        const contactForm = document.getElementById('contactForm');
-        
+    // Form Submission
+    const contactForm = document.getElementById('contactForm');
+    
+    if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
             alert('Thank you for your message! We will get back to you soon.');
             contactForm.reset();
         });
+    }
 
-        // Scroll Animation
-        const fadeElements = document.querySelectorAll('.fade-in');
-        
-        function checkFade() {
-            fadeElements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const windowHeight = window.innerHeight;
-                
-                if (elementTop < windowHeight - 100) {
-                    element.classList.add('visible');
-                }
-            });
-        }
-        
-        window.addEventListener('scroll', checkFade);
-        window.addEventListener('load', checkFade);
+    // Scroll Animation
+    const fadeElements = document.querySelectorAll('.fade-in');
+    
+    function checkFade() {
+        fadeElements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            
+            if (elementTop < windowHeight - 100) {
+                element.classList.add('visible');
+            }
+        });
+    }
+    
+    window.addEventListener('scroll', checkFade);
+    window.addEventListener('load', checkFade);
 
-        // Smooth Scrolling for Anchor Links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
+    // Smooth Scrolling for Anchor Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+
+                if (nav) {
                     nav.classList.remove('active');
                 }
-            });
+            }
         });
-    </script>
+    });
+</script>
+
 </body>
 </html>
